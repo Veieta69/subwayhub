@@ -2,22 +2,22 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     game.over(true)
 })
 let ged = sprites.create(img`
-    . . . . . f f f f f . . . . . . 
-    . . . . f e e e e e f . . . . . 
-    . . . f d d d d d d e f . . . . 
-    . . f d f f d d f f d f f . . . 
-    . c d d d e e d d d d e d f . . 
-    . c d c d d d d c d d e f f . . 
-    . c d d c c c c d d d e f f f f 
-    . . c d d d d d d d e f f b d f 
-    . . . c d d d d e e f f f d d f 
-    . . . . f f f e e f e e e f f f 
-    . . . . f e e e e e e e f f f . 
-    . . . f e e e e e e f f f e f . 
-    . . f f e e e e f f f f f e f . 
-    . f b d f e e f b b f f f e f . 
-    . f d d f f f f d d b f f f f . 
-    . f f f f f f f f f f f f f . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . e e e e e e . . . . . 
+    . . . . . d 1 d d 1 d . . . . . 
+    . . . . . d d d d d d . . . . . 
+    . . . . . d d 2 2 d d . . . . . 
+    . . . . 6 6 6 6 6 6 6 6 . . . . 
+    . . . . 6 6 6 6 6 6 6 6 . . . . 
+    . . . . d d 6 6 6 6 d d . . . . 
+    . . . . d d 6 6 6 6 d d . . . . 
+    . . . . d d 6 6 6 6 d d . . . . 
+    . . . . d d 8 8 8 8 d d . . . . 
+    . . . . . . 8 8 8 8 . . . . . . 
+    . . . . . . 8 8 8 8 . . . . . . 
+    . . . . . . a a a a . . . . . . 
+    . . . . . . 8 8 8 8 . . . . . . 
+    . . . . . . f f f f . . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(ged, 100, 100)
 scene.setBackgroundImage(img`
@@ -144,5 +144,5 @@ scene.setBackgroundImage(img`
     `)
 scene.cameraFollowSprite(ged)
 tiles.setCurrentTilemap(tilemap`level1`)
-tiles.placeOnRandomTile(ged, sprites.dungeon.floorLight0)
+tiles.placeOnRandomTile(ged, sprites.dungeon.doorOpenNorth)
 info.startCountdown(20)
